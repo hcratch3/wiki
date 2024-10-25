@@ -1,4 +1,4 @@
-# Hcratch3 WikiPedia
+# ![](https://creatime.net/wp-content/uploads/2022/12/inspiration.png)Hcratch3 WikiPedia
 
 [About]()
 
