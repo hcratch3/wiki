@@ -11,4 +11,4 @@
   - - - -
   * [サンプル](demo/sample.html)
 
-[お問い合わせ](contact.md)
+[お知らせ📢](announce.md)
