@@ -8,8 +8,7 @@
    See http://github.com/Dynalon/mdwiki for a copy of the source code.
 -->
 <head>
-   <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-    <title>💡 Hcratch3 WikiPedia</title>
+    <title>Hcratch3 WikiPedia</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="fragment" content="!">
     <link rel="shortcut icon" type="image/x-icon" href="favicon.svg" />
@@ -130,16 +129,22 @@
     </style>
 
    <script>
-$(function () {
+document.addEventListener("DOMContentLoaded", function () {
   function end_loader() {
-    $('.loader').fadeOut(800);
+    document.querySelector('.loader').style.transition = "opacity 0.8s";
+    document.querySelector('.loader').style.opacity = 0;
+    setTimeout(function () {
+      document.querySelector('.loader').style.display = "none";
+    }, 800); // Wait for fadeOut effect to complete before hiding element
   }
-  $(window).on('load', function () {
+
+  window.addEventListener('load', function () {
     setTimeout(function () {
       end_loader();
-    }, 3000)
-  })
-})
+    }, 3000);
+  });
+});
+
    </script>
 
 <!-- START extlib/css/bootstrap-3.0.0.min.css -->
