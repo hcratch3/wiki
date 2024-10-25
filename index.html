@@ -131,10 +131,10 @@
    <script>
 document.addEventListener("DOMContentLoaded", function () {
   function end_loader() {
-    document.querySelector('.loader').style.transition = "opacity 0.8s";
-    document.querySelector('.loader').style.opacity = 0;
+    document.querySelector('.loading').style.transition = "opacity 0.8s";
+    document.querySelector('.loading').style.opacity = 0;
     setTimeout(function () {
-      document.querySelector('.loader').style.display = "none";
+      document.querySelector('.loading').style.display = "none";
     }, 800); // Wait for fadeOut effect to complete before hiding element
   }
 
