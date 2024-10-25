@@ -13,6 +13,4 @@
 
 [お知らせ📢](announce.md)
 
-<script async src="https://cse.google.com/cse.js?cx=94ff3b1871dd64989">
-</script>
-<div class="gcse-search" style="wight:'100px'"></div>
+[検索🔍️](search.md)
