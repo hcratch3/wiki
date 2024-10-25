@@ -128,6 +128,19 @@
     }
     </style>
 
+   <script>
+$(function () {
+  function end_loader() {
+    $('.loader').fadeOut(800);
+  }
+  $(window).on('load', function () {
+    setTimeout(function () {
+      end_loader();
+    }, 3000)
+  })
+})
+   </script>
+
 <!-- START extlib/css/bootstrap-3.0.0.min.css -->
 <style id="style:extlib/css/bootstrap-3.0.0.min.css">/*!
  * Bootstrap v3.0.0
