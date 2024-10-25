@@ -14,6 +14,24 @@
     <link rel="shortcut icon" type="image/x-icon" href="favicon.svg" />
     <meta charset="UTF-8">
     <style type="text/css">
+   .wrapper{
+    width:200px;
+    height:60px;
+    position: absolute;
+    left:50%;
+    top:50%;
+    transform: translate(-50%, -50%);
+}
+.circle{
+    width:20px;
+    height:20px;
+    position: absolute;
+    border-radius: 50%;
+    background-color: #fff;
+    left:15%;
+    transform-origin: 50%;
+    animation: circle .5s alternate infinite ease;
+}
     /* hide the main content while we assemble everything */
     .md-hidden-load { display: none; }
 
