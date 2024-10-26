@@ -1,4 +1,4 @@
-name: Generate Markdown Article
+name: Generate Markdown Article with Cohere API
 
 on:
   workflow_dispatch:
@@ -22,9 +22,9 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
 
-      - name: Generate Article
+      - name: Generate Article using Cohere API
         env:
-          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          COHERE_API_KEY: ${{ secrets.COHERE_API_KEY }}
         run: |
           # ワークフローの入力からトピックとファイル名を取得
           TOPIC="${{ github.event.inputs.topic }}"
@@ -33,21 +33,19 @@ jobs:
           # postフォルダーが存在しない場合は作成
           mkdir -p post
 
-          # OpenAI APIを使って記事を生成
-          RESPONSE=$(curl -s https://api.openai.com/v1/chat/completions \
-          -H "Authorization: Bearer $OPENAI_API_KEY" \
+          # Cohere APIを使って記事を生成
+          RESPONSE=$(curl -s https://api.cohere.ai/v1/generate \
+          -H "Authorization: Bearer $COHERE_API_KEY" \
           -H "Content-Type: application/json" \
           -d '{
-            "model": "gpt-3.5-turbo",
-            "messages": [{"role": "user", "content": "Write a markdown article about '"$TOPIC"'."}],
-            "max_tokens": 500
+            "model": "command-xlarge-nightly",
+            "prompt": "Write a detailed markdown article about '"$TOPIC"'",
+            "max_tokens": 500,
+            "temperature": 0.8
           }')
 
-          # レスポンスを出力して確認
-          echo "API Response: $RESPONSE"
-
           # 生成された記事を取り出す
-          ARTICLE=$(echo $RESPONSE | jq -r '.choices[0].message.content')
+          ARTICLE=$(echo $RESPONSE | jq -r '.generations[0].text')
 
           # 記事が正しく取得できているか確認
           echo "Generated Article: $ARTICLE"
@@ -56,9 +54,11 @@ jobs:
           echo "$ARTICLE" > "post/$FILENAME"
 
       - name: Commit and Push Article
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          git config --local user.email "hcratch@outlook.com"
-          git config --local user.name "hcratch3"
+          git config --local user.email "your-email@example.com"
+          git config --local user.name "your-username"
           git add post/"$FILENAME"
           git commit -m "Generate article about $TOPIC with filename $FILENAME"
           git push
