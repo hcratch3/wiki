@@ -59,7 +59,7 @@ jobs:
           SITEMAP_FILE="sitemap.xml"
 
           # 新しいURLを生成
-          NEW_URL="https://hcratch3.github.io/wiki/post/${{ github.event.inputs.filename }}.md"
+          NEW_URL="https://hcratch3.github.io/wiki/#!post/${{ github.event.inputs.filename }}.md"
 
           # sitemap.xmlが存在するか確認し、なければ作成
           if [ ! -f "$SITEMAP_FILE" ]; then
