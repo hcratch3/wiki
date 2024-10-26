@@ -6,7 +6,7 @@ on:
       prompt:
         description: 'Enter the prompt for Gemini AI'
         required: true
-        default: 'Write about the importance of AI in software development.'
+        default: 'Explain how AI works'
 
 jobs:
   generate-content:
@@ -28,8 +28,13 @@ jobs:
     - name: Generate text using Gemini AI
       run: |
         echo '{
-          "prompt": "${{ github.event.inputs.prompt }}",
-          "max_tokens": 300
+          "contents": [
+            {
+              "parts": [
+                {"text": "${{ github.event.inputs.prompt }}"}
+              ]
+            }
+          ]
         }' > prompt.json
         python generate_gemini_content.py
 
