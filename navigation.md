@@ -14,3 +14,5 @@
 [お知らせ📢](announce.md)
 
 [検索🔍️](search.md)
+
+[gimmick:theme](cosmo)
