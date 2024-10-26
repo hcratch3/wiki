@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: http://hcratch3.github.io/wiki/sitemap.xml
+Sitemap: https://hcratch3.github.io/wiki/sitemap.xml
