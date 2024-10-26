@@ -26,7 +26,8 @@ print("Response Text:", response.text)
 # レスポンスが正常かどうか確認
 if response.status_code == 200:
     try:
-        content = response.json().get("contents")[0].get("parts")[0].get("text")
+        # 修正: candidatesからコンテンツを取得
+        content = response.json().get("candidates")[0].get("content").get("parts")[0].get("text")
         with open("generated_content.txt", "w") as f:
             f.write(content)
     except (IndexError, TypeError) as e:
