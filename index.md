@@ -4,4 +4,4 @@
 
 | 記事を探す |
 | - |
-| [『検索🔍️』する](search.md) |
+| <br><br> [『検索🔍️』する](search.md) <br><br> <sub>Powered by Google Costom Search</sub> |
