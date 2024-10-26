@@ -1,0 +1,4 @@
+User-agent: *
+Disallow:
+
+Sitemap: http://hcratch3.github.io/wiki/sitemap.xml
