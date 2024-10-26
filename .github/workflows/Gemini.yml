@@ -43,8 +43,14 @@ jobs:
             "max_tokens": 500
           }')
 
+          # レスポンスを出力して確認
+          echo "API Response: $RESPONSE"
+
           # 生成された記事を取り出す
           ARTICLE=$(echo $RESPONSE | jq -r '.choices[0].message.content')
+
+          # 記事が正しく取得できているか確認
+          echo "Generated Article: $ARTICLE"
 
           # postフォルダーに指定されたファイル名でMarkdownファイルに書き込む
           echo "$ARTICLE" > "post/$FILENAME"
