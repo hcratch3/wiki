@@ -3,7 +3,7 @@ import json
 
 # Gemini API エンドポイントとキーの設定
 API_URL = "https://api.gemini.com/generate"
-API_KEY = "your_gemini_api_key"
+API_KEY = "AIzaSyCE9pYu_m3516CimJvdi_5T3PP2re6InrM"
 
 # プロンプトをファイルから読み込み
 with open('prompt.json', 'r') as f:
