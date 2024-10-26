@@ -19,9 +19,17 @@ headers = {
 # Gemini API から生成されたコンテンツを取得
 response = requests.post(full_url, json=data, headers=headers)
 
+# デバッグ用: レスポンスの内容を表示
+print("Response Status Code:", response.status_code)
+print("Response Text:", response.text)
+
+# レスポンスが正常かどうか確認
 if response.status_code == 200:
-    content = response.json().get("contents")[0].get("parts")[0].get("text")
-    with open("generated_content.txt", "w") as f:
-        f.write(content)
+    try:
+        content = response.json().get("contents")[0].get("parts")[0].get("text")
+        with open("generated_content.txt", "w") as f:
+            f.write(content)
+    except (IndexError, TypeError) as e:
+        raise Exception(f"Unexpected response structure: {response.json()}")
 else:
     raise Exception(f"Error generating content: {response.status_code}, {response.text}")
