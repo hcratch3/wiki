@@ -29,7 +29,10 @@ jobs:
           # ワークフローの入力からトピックとファイル名を取得
           TOPIC="${{ github.event.inputs.topic }}"
           FILENAME="${{ github.event.inputs.filename }}.md"
-          
+
+          # postフォルダーが存在しない場合は作成
+          mkdir -p post
+
           # OpenAI APIを使って記事を生成
           RESPONSE=$(curl -s https://api.openai.com/v1/chat/completions \
           -H "Authorization: Bearer $OPENAI_API_KEY" \
@@ -43,13 +46,13 @@ jobs:
           # 生成された記事を取り出す
           ARTICLE=$(echo $RESPONSE | jq -r '.choices[0].message.content')
 
-          # 指定されたファイル名でMarkdownファイルに書き込む
-          echo "$ARTICLE" > "$FILENAME"
+          # postフォルダーに指定されたファイル名でMarkdownファイルに書き込む
+          echo "$ARTICLE" > "post/$FILENAME"
 
       - name: Commit and Push Article
         run: |
           git config --local user.email "your-email@example.com"
           git config --local user.name "your-username"
-          git add "$FILENAME"
+          git add post/"$FILENAME"
           git commit -m "Generate article about $TOPIC with filename $FILENAME"
           git push
