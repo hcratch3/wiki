@@ -77,7 +77,7 @@ jobs:
           INDEX_FILE="index.md"
 
           # 新しい記事のリンクを作成
-          NEW_ENTRY="| [${{ github.event.inputs.topic }}](post/${{ github.event.inputs.filename }}.md) |"
+          NEW_ENTRY="- [${{ github.event.inputs.topic }}](post/${{ github.event.inputs.filename }}.md)"
 
           # 総目次セクションに新しい記事を追加
           sed -i '/## 総目次/a '"$NEW_ENTRY" "$INDEX_FILE"
