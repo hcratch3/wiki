@@ -1,24 +1,18 @@
-# Microsoft: ソフトウェア界の巨人
+# Microsoft Corporation
 
-Microsoft は、ソフトウェア業界において最も著名な企業の一つです。1975 年にビル・ゲイツとポール・アレンによって設立され、パーソナル コンピューティングの世界に革命をもたらしました。この記事では、Microsoft の歴史、主要な製品、その業界における影響について解説します。
+Microsoft Corporation is an American multinational technology company headquartered in Redmond, Washington. It was founded on April 4, 1975, by Bill Gates and Paul Allen, and has become one of the world's most influential and valuable technology companies. Microsoft is widely known for its software products, especially the Microsoft Windows operating system and the Microsoft Office suite of productivity software. However, the company has diversified its business over the years and now offers a wide range of products and services in the technology sector.
 
-## 歴史
+## History
 
-- **設立**: Microsoft は、1975 年 4 月 4 日にニューメキシコ州アルバカーキでビル・ゲイツとポール・アレンによって設立されました。最初の製品は、Altair 8800 マイクロコンピューター用のインタプリタである Altair BASIC でした。
-- **オペレーティング システム**: 1980 年代、Microsoft は MS-DOS オペレーティング システムを開発し、IBM と提携してパーソナル コンピュータの普及を促進しました。MS-DOS は、PC 市場を支配し、Microsoft の成功の基礎を築きました。
-- **Windows の台頭**: 1985 年に Microsoft は Windows オペレーティング システムをリリースしました。グラフィカル ユーザー インターフェイスを備えた Windows は、コンピューティングをより直感的でアクセスしやすいものにしました。Windows は急速に人気を博し、世界で最も広く使用されているオペレーティング システムの 1 つになりました。
-- **オフィス スイート**: Microsoft は、1990 年に Microsoft Office スイートを導入しました。Word、Excel、PowerPoint などのアプリケーションは、ビジネスや個人の生産性を向上させ、Microsoft の市場シェアを拡大しました。
-- **インターネット時代**: 1990 年代半ば、Microsoft はインターネットの台頭を認識し、Internet Explorer ブラウザと MSN サービスを導入しました。これにより、同社はウェブ テクノロジーの分野で重要な役割を果たしました。
+### Early Years (1975-1985)
+In 1975, Bill Gates and Paul Allen saw the potential of personal computing and started Microsoft to develop and sell BASIC interpreters for the Altair 8800. The company quickly gained success and secured a significant contract with IBM to provide the operating system for their personal computers. In 1980, Microsoft signed a contract granting IBM rights to MS-DOS, an operating system for IBM PCs. This partnership proved to be a turning point for Microsoft, as it established the company as a major player in the PC market.
 
-## 主要な製品
+During this period, Microsoft also introduced the first version of Microsoft Word and the Windows operating system. Windows 1.0, released in 1985, was the first version of the graphical user interface-based operating system that would eventually dominate the global PC market.
 
-- **Windows**: Microsoft の主力製品は、Windows オペレーティング システムです。Windows 10、Windows 11 などの最新バージョンでは、ユーザー エクスペリエンスの向上、セキュリティの強化、革新的な機能の導入が図られています。
-- **Microsoft Office**: Office 365 を含む Microsoft Office スイートは、世界中で何百万ものユーザーに利用されています。Word、Excel、Outlook などのアプリケーションは、文書作成、データ分析、電子メール管理などの分野で標準となっています。
-- **Azure**: Microsoft Azure は、クラウド コンピューティング プラットフォームです。企業がアプリケーションを構築、管理、デプロイできるようにし、クラウド テクノロジーの分野で Microsoft をリーダー的存在にしています。
-- **Xbox**: Microsoft は、Xbox ゲーム コンソールシリーズでビデオ ゲーム業界にも進出しました。Xbox Live サービスは、オンライン ゲーミング エクスペリエンスを強化し、ゲームコミュニティに革命をもたらしました。
+### Growth and Dominance (1985-2000)
+The late 1980s and 1990s were a period of tremendous growth for Microsoft. The release of Windows 3.0 in 1990 made the operating system more user-friendly and popular, solidifying Microsoft's position in the market. The company also expanded its product portfolio with the introduction of Microsoft Office, which bundled Word, Excel, and PowerPoint into a single suite.
 
-## 影響と革新
+In 1995, Microsoft released Windows 95, which became an instant success and further strengthened the company's market dominance. The launch of Internet Explorer in the same year marked Microsoft's entry into the burgeoning internet browser market. The browser's integration with Windows gave it a significant advantage, and it soon became the most widely used web browser.
 
-Microsoft はソフトウェア業界に多大な影響を与え、コンピューティングの進化を形作ってきました。いくつかの注目すべき貢献には次のようなものがあります。
-
-- **パーソナル コンピューティングの普及**: Microsoft のソフトウェアとオペレーティング システムは、パーソナル コンピューティングをよりアクセスしやすく、使いやすくしました。これにより、コンピューターはビジネスや家庭の主流になりました。
+### Antitrust Lawsuits and Diversification (2000-2010)
+Microsoft's dominance in the technology market
