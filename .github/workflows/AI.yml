@@ -1,4 +1,4 @@
-name: Generate Markdown Article and Update Sitemap
+name: Generate Markdown Article and Update Index and Sitemap
 
 on:
   workflow_dispatch:
@@ -39,8 +39,8 @@ jobs:
           -H "Content-Type: application/json" \
           -d '{
             "model": "command-xlarge-nightly",
-            "prompt": "日本語で'"$TOPIC"'についての記事をMakedown形式で書いてください。",
-            "max_tokens": 1000,
+            "prompt": "Write a detailed markdown article about '"$TOPIC"'",
+            "max_tokens": 500,
             "temperature": 0.8
           }')
 
@@ -71,27 +71,23 @@ jobs:
           # 新しいURLをsitemap.xmlに追加
           sed -i '$i <url><loc>'$NEW_URL'</loc></url>' $SITEMAP_FILE
 
-      - name: Update index.md
+      - name: Update index.md with new article
         run: |
-          # index.mdのパス
+          # index.mdファイルのパス
           INDEX_FILE="index.md"
 
-          # ファイルURLを生成
-          FILE_URL="post/${{ github.event.inputs.filename }}.md"
+          # 新しい記事のリンクを作成
+          NEW_ENTRY="| [${{ github.event.inputs.topic }}](post/${{ github.event.inputs.filename }}.md) |"
 
-          # ファイル名の取得
-
-          FILE_NAME="${{ github.event.inputs.filename }}"
-
-          # ファイルURLをindex.mdに追加
-          sed -i '$i ('$FILE_NAME')['$FILE_URL']' $INDEX_FILE
+          # 総目次セクションに新しい記事を追加
+          sed -i '/## 総目次/a '"$NEW_ENTRY" "$INDEX_FILE"
 
       - name: Commit and Push Changes
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          git config --local user.email "hcratch@outlook.com"
-          git config --local user.name "hcratch3"
-          git add post/"$FILENAME" sitemap.xml
-          git commit -m "Generate article about $TOPIC and update sitemap.xml"
+          git config --local user.email "your-email@example.com"
+          git config --local user.name "your-username"
+          git add post/"$FILENAME" sitemap.xml index.md
+          git commit -m "Generate article about $TOPIC, update sitemap.xml and index.md"
           git push
