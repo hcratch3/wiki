@@ -39,7 +39,7 @@ jobs:
           -H "Content-Type: application/json" \
           -d '{
             "model": "command-xlarge-nightly",
-            "prompt": "日本語で'"$TOPIC"'についてMakedown記事を書いてください。",
+            "prompt": "日本語で'"$TOPIC"'についての記事をMakedown形式で書いてください。",
             "max_tokens": 500,
             "temperature": 0.8
           }')
