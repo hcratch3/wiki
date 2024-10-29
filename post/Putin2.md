@@ -5,4 +5,4 @@
 代表的な作品を紹介します。
 
 ## プーチンとプリンの違い
-<iframe width="100%" height="100%" src="https://www.youtube.com/embed/50PD9XpfyOM" title="＃Shorts　プーチンとプリンの違い" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="563" height="1000" src="https://www.youtube.com/embed/50PD9XpfyOM" title="＃Shorts　プーチンとプリンの違い" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
