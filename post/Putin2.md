@@ -9,5 +9,5 @@
 @もなおう-b6f
 
 ## プーさんとプーチンの違い
-<iframe width="1051" height="1868" src="https://www.youtube.com/embed/kNG6SECMQEU" title="プーさんとプーチンの違い #Shorts" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe width="281" height="500" src="https://www.youtube.com/embed/kNG6SECMQEU" title="プーさんとプーチンの違い #Shorts" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 @もなおう-b6f
