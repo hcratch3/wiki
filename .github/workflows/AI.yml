@@ -76,6 +76,24 @@ jobs:
           # 新しいURLをsitemap.xmlに追加
           sed -i '$i <url><loc>'$NEW_URL'</loc></url>' $SITEMAP_FILE
 
+      - name: Update sitemap.xml
+        run: |
+          # sitemap.xmlのパス
+          SITEMAP_FILE="sitemap.xml"
+
+          # 新しいURLを生成
+          NEW_URL="https://hcratch3.github.io/wiki/#!post/${{ github.event.inputs.filename }}.md"
+
+          # sitemap.xmlが存在するか確認し、なければ作成
+          if [ ! -f "$SITEMAP_FILE" ]; then
+            echo '<?xml version="1.0" encoding="UTF-8"?>' > $SITEMAP_FILE
+            echo '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">' >> $SITEMAP_FILE
+            echo '</urlset>' >> $SITEMAP_FILE
+          fi
+
+          # 新しいURLをsitemap.xmlに追加
+          sed -i '$i <url><loc>'$NEW_URL'</loc></url>' $SITEMAP_FILE
+
       - name: Update index.md with new article
         run: |
           # index.mdファイルのパス
